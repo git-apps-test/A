@@ -133,19 +133,13 @@
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
-    },
-    {
       "key": "customFusionChartConfig"
     },
     {
+      "key": "borderRadius"
+    },
+    {
       "key": "boxShadow"
-    },
-    {
-      "key": "accentColor"
-    },
-    {
-      "key": "fontFamily"
     }
   ],
   "dynamicPropertyPathList": [
@@ -166,7 +160,7 @@
   "key": "an9viw4yzm",
   "labelOrientation": "auto",
   "labelTextSize": "0.875rem",
-  "leftColumn": 0,
+  "leftColumn": 22,
   "onDataPointClick": "{{(function () { storeValue('metricDetail',Chart4.selectedDataPoint.x, false)\n\t\t\t\t\t\t\t\t\t\tshowModal(\"Modal1\")\n\trun_meta.run()\n\n})()}}",
   "parentColumnSpace": 21.92578125,
   "parentId": "0",

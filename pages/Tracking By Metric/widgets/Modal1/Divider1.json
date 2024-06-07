@@ -7,6 +7,7 @@
   "capType": "nc",
   "displayName": "Divider",
   "dividerColor": "#EBEBEB",
+  "dynamicBindingPathList": [],
   "hideCard": false,
   "iconSVG": "/static/media/icon.cbe8f608.svg",
   "isLoading": false,

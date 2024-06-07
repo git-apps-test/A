@@ -8,10 +8,7 @@
   "displayName": "Select",
   "dynamicBindingPathList": [
     {
-      "key": "options"
-    },
-    {
-      "key": "accentColor"
+      "key": "sourceData"
     },
     {
       "key": "borderRadius"

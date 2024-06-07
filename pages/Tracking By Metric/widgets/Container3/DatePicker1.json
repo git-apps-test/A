@@ -11,13 +11,13 @@
   "displayName": "DatePicker",
   "dynamicBindingPathList": [
     {
+      "key": "defaultDate"
+    },
+    {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",

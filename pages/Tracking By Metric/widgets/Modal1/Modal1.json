@@ -38,6 +38,7 @@
   ],
   "detachFromLayout": true,
   "displayName": "Modal",
+  "dynamicBindingPathList": [],
   "dynamicHeight": "FIXED",
   "height": 480,
   "hideCard": false,

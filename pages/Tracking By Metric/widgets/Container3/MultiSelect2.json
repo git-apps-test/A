@@ -8,13 +8,13 @@
   "displayName": "MultiSelect",
   "dynamicBindingPathList": [
     {
-      "key": "options"
-    },
-    {
-      "key": "accentColor"
+      "key": "sourceData"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "accentColor"
     }
   ],
   "dynamicHeight": "FIXED",

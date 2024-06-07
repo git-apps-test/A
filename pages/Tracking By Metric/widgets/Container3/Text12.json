@@ -6,9 +6,6 @@
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",

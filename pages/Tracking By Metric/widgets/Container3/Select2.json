@@ -8,9 +8,6 @@
   "displayName": "Select",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
       "key": "borderRadius"
     }
   ],
