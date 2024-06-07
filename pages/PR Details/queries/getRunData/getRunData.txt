@@ -1,0 +1,3 @@
+
+SELECT run.id as id,metric,action,value from run_meta RIGHT OUTER JOIN run on run.meta = run_meta.id WHERE gh_run_id = {{runId.selectedOptionValue.split("_")[0]}} and metric IN ({{Utils.getMetricsToShow()}}) and repo = '{{RepoSelect.selectedOptionValue}}' and gh_run_attempt = {{runId.selectedOptionValue.split("_")[1]}} ORDER BY id;
+

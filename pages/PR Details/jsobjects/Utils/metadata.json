@@ -1,0 +1,36 @@
+{
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_6329db5fba642f555713e7d6",
+  "id": "PR Details_Utils",
+  "unpublishedCollection": {
+    "name": "Utils",
+    "pageId": "PR Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "defaultMetrics",
+        "value": "[\"scripting\", \"rendering\", \"worker_scripting\"]"
+      },
+      {
+        "name": "metrics",
+        "value": "['scripting', 'rendering', 'worker_scripting']"
+      },
+      {
+        "name": "metricsOrder",
+        "value": "Utils.metrics.reduce((acc, metric, index) => ({\n  ...acc,\n  [metric]: index + 1\n}, {}))"
+      },
+      {
+        "name": "runComparisonOptions",
+        "value": "[{\n  label: 'Compare with Long Term average Merge Runs(LT)',\n  value: 50\n}, {\n  label: 'Compare with Short Term average Merge Runs(ST)',\n  value: 3\n}, {\n  label: 'Compare with Both(LT & ST)',\n  value: 1\n}]"
+      },
+      {
+        "name": "defaultAction",
+        "value": "'SELECT_CATEGORY'"
+      },
+      {
+        "name": "incorrectRunValueMessage",
+        "value": "\"Not a valid number\""
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+SELECT DISTINCT base_branch FROM public.run_meta where repo = 'appsmithorg/{{this.params.repo}}';

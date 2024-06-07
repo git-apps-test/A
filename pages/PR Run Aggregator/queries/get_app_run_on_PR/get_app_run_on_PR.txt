@@ -1,0 +1,5 @@
+select run.meta, run.action, run.metric, PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY run.value) as median
+from run_meta
+LEFT JOIN run ON run.meta = run_meta.id
+WHERE run_meta.pull_request_id={{appsmith.URL.queryParams?.id}}
+GROUP BY run.meta, run.action, run.metric

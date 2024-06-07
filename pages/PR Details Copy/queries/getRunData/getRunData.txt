@@ -1,0 +1,3 @@
+SELECT * FROM run 
+WHERE meta={{Select1.selectedOptionValue}} and metric IN ({{Utils.getMetricsToShow()}})
+ORDER BY id;

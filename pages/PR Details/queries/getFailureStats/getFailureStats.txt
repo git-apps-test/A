@@ -1,0 +1,7 @@
+SELECT count(id), 2 as failures from run_meta where lt_median_failure is NOT NULL AND lt_min_failure is NOT NULL AND lt_median_failure + lt_min_failure < 2 AND is_merge_commit
+UNION
+SELECT count(id), 4 as failures from run_meta where lt_median_failure is NOT NULL AND lt_min_failure is NOT NULL AND lt_median_failure + lt_min_failure < 4 AND is_merge_commit
+UNION
+SELECT count(id), 1 as failures from run_meta where lt_median_failure is NOT NULL AND lt_min_failure is NOT NULL AND lt_median_failure + lt_min_failure < 1 AND is_merge_commit
+UNION
+SELECT count(id), 100 as falures from run_meta where lt_median_failure is NOT NULL AND lt_min_failure is NOT NULL AND is_merge_commit;

@@ -1,0 +1,25 @@
+--SELECT action, metric,  PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY value) as median 
+--from run 
+--where meta = (select id from run_meta where is_merge_commit AND pull_request_id<>-1 ORDER BY ID desc LIMIT 1)
+--and metric IN ({{Utils.getMetricsToShow()}})
+--GROUP BY meta, action, metric;
+
+SELECT 
+cast(AVG(median) as decimal(10,2)) as median,
+cast(AVG(min) as decimal(10, 2)) as min,
+cast(STDDEV(median) as decimal(10,2)) as SD,
+cast(STDDEV(min) as decimal(10, 2)) as SDmin,
+cast((ARRAY_AGG(median))[count(median)] as decimal(10, 2)) as lastRelease,
+cast((array_agg(median))[count(median)] as decimal(10, 2)) as median1,
+cast((array_agg(median))[count(median)-1] as decimal(10, 2)) as median2,
+cast((array_agg(median))[count(median)-2] as decimal(10, 2)) as median3,
+cast((array_agg(min))[count(min)] as decimal(10, 2)) as min1,
+cast((array_agg(min))[count(min)-1] as decimal(10, 2)) as min2,
+cast((array_agg(min))[count(min)-2] as decimal(10, 2)) as min3,
+action,
+metric from 
+(SELECT action, metric, meta,  PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY value) as median, MIN(value) as min 
+from run 
+where meta in (select id from run_meta where is_merge_commit {{Utils.getCurrentRunMetaId() ? `and id < ${Utils.getCurrentRunMetaId()} ` : ''}} order by created_at DESC limit 50 offset 0)
+and metric IN ({{Utils.getMetricsToShow()}}) AND action='SELECT_WIDGET_MENU_OPEN'
+GROUP BY meta, action, metric) as medians GROUP BY action, metric;

@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "defaultOptionValue": "{\n    \"label\": \"buildjet-4vcpu-ubuntu-2004\",\n    \"value\": \"buildjet-4vcpu-ubuntu-2004\"\n}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba.svg",
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "wb14uyt3lv",
+  "labelText": "Machine",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onOptionChange": "{{Select2.selectedOptionValue == 'min' ? run_by_metric_min.run() : run_by_metric.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 18.921875,
+  "parentId": "skzyybbydx",
+  "parentRowSpace": 10,
+  "placeholderText": "Select to filter runs",
+  "renderMode": "CANVAS",
+  "rightColumn": 49,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"ubuntu-latest\",\n    \"value\": \"ubuntu-latest\"\n  },\n  {\n    \"label\": \"buildjet-4vcpu-ubuntu-2004\",\n    \"value\": \"buildjet-4vcpu-ubuntu-2004\"\n  },\n\t{\"label\":\"No Machine\",\"value\":\"\"}\n]",
+  "topRow": 4,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "l895xc3uqs",
+  "widgetName": "SelectMachineFilter"
+}

@@ -1,0 +1,2 @@
+
+(SELECT pull_request_id, pr_title, is_merge_commit, created_at, lt_median_failure, lt_min_failure from run_meta where base_branch = 'master' and lt_median_failure is not NULL ORDER BY created_at DESC)

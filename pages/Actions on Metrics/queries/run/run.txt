@@ -1,0 +1,6 @@
+SELECT machine, meta, action, metric, PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY value) as median from public.run 
+LEFT JOIN run_meta ON run.meta = run_meta.id
+where action IN ({{MultiSelect1.selectedOptionValues.reduce((result, item, index) => {
+		return result + "'" + item + "'" + (index != MultiSelect1.selectedOptionValues.length - 1 ? "," : "")
+	}, "")}}) {{SelectMachineFilter.selectedOptionValue ? "AND machine = '" + SelectMachineFilter.selectedOptionValue + "'": ""}} GROUP BY meta, action, metric, machine
+	

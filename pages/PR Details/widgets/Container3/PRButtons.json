@@ -1,0 +1,195 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "buttonVariant": "TERTIARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2rjf3qrnvs.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonm4ofmyru6z.buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2rjf3qrnvs.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2rjf3qrnvs.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "link",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Open Github Action",
+      "menuItems": {},
+      "onClick": "{{navigateTo(`https://github.com/appsmithorg/appsmith/actions/runs/${runId.selectedOptionValue?.split('_')?.[0]}`, {}, 'NEW_WINDOW')}}",
+      "placement": "START",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "link",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Open PR Artifacts",
+      "menuItems": {},
+      "onClick": "{{navigateTo(`https://github.com/appsmithorg/appsmith/actions/runs/${runId.selectedOptionValue?.split('_')?.[0]}#artifacts`, {}, 'NEW_WINDOW')}}",
+      "placement": "START",
+      "widgetId": ""
+    },
+    "groupButton2rjf3qrnvs": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "link",
+      "id": "groupButton2rjf3qrnvs",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Open PR",
+      "menuItems": {},
+      "onClick": "{{navigateTo(getPrDetails.data.html_url, {}, 'NEW_WINDOW')}}",
+      "placement": "START",
+      "widgetId": "rtkqtno9vz"
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "eye-open",
+      "id": "groupButton3",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "View PR Details",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "First Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Second Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem3": {
+          "backgroundColor": "#DD4B34",
+          "iconAlign": "right",
+          "iconColor": "#FFFFFF",
+          "iconName": "trash",
+          "id": "menuItem3",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Delete",
+          "onClick": "",
+          "textColor": "#FFFFFF",
+          "widgetId": ""
+        },
+        "menuItemxjeaonzyqw": {
+          "id": "menuItemxjeaonzyqw",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View PR",
+          "widgetId": "ugvg6zm0dr"
+        }
+      },
+      "onClick": "{{showModal('PRDetailsModal')}}",
+      "placement": "START",
+      "widgetId": ""
+    },
+    "groupButtonm4ofmyru6z": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "help",
+      "id": "groupButtonm4ofmyru6z",
+      "index": 4,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Help",
+      "menuItems": {},
+      "placement": "START",
+      "widgetId": "bpn0od6nhe"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "iziwempvid",
+  "leftColumn": 54,
+  "orientation": "vertical",
+  "parentColumnSpace": 20.0625,
+  "parentId": "m1jo7mmxx3",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "erd5w26q7l",
+  "widgetName": "PRButtons"
+}

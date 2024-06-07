@@ -1,0 +1,263 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "buttonVariant": "SECONDARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonswoi5bpqok.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonc5x8ctwb0e.buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemyakud6ztmk.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemxpmbjro7h2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemekb2o8fhed.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItemgosqznqf5y.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.menuItems.menuItempketkg82md.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem7hvkmhs2zh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemxcrz1y5s4q.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemkb4oya7d6o.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemgcpyxen4bi.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemlpzijez1ay.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonswoi5bpqok.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonc5x8ctwb0e.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItem7hvkmhs2zh.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemxcrz1y5s4q.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemkb4oya7d6o.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemgcpyxen4bi.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.menuItems.menuItemlpzijez1ay.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonswoi5bpqok.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonc5x8ctwb0e.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "iconName": "more",
+      "id": "groupButton2",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Download Trace Reports",
+      "menuItems": {
+        "menuItem7hvkmhs2zh": {
+          "iconName": "cloud-download",
+          "id": "menuItem7hvkmhs2zh",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Run 1",
+          "onClick": "{{DownloadUtils.getDownloadTraceReportsUrl(1)}}",
+          "widgetId": "fg67fsbdmf"
+        },
+        "menuItemgcpyxen4bi": {
+          "iconName": "cloud-download",
+          "id": "menuItemgcpyxen4bi",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Run 4",
+          "onClick": "{{DownloadUtils.getDownloadTraceReportsUrl(4)}}",
+          "widgetId": "i9ivtw97q9"
+        },
+        "menuItemkb4oya7d6o": {
+          "iconName": "cloud-download",
+          "id": "menuItemkb4oya7d6o",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Run 3",
+          "onClick": "{{DownloadUtils.getDownloadTraceReportsUrl(3)}}",
+          "widgetId": "eekwnok94b"
+        },
+        "menuItemlpzijez1ay": {
+          "iconName": "cloud-download",
+          "id": "menuItemlpzijez1ay",
+          "index": 4,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Run 5",
+          "onClick": "{{DownloadUtils.getDownloadTraceReportsUrl(5)}}",
+          "widgetId": "5k6nkp3ts0"
+        },
+        "menuItemxcrz1y5s4q": {
+          "iconName": "cloud-download",
+          "id": "menuItemxcrz1y5s4q",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Run 2",
+          "onClick": "{{DownloadUtils.getDownloadTraceReportsUrl(2)}}",
+          "widgetId": "m0j3v34e0h"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "cloud-download",
+      "id": "groupButton3",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Download LT Compare Results",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "First Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Second Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem3": {
+          "backgroundColor": "#DD4B34",
+          "iconAlign": "right",
+          "iconColor": "#FFFFFF",
+          "iconName": "trash",
+          "id": "menuItem3",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Delete",
+          "onClick": "",
+          "textColor": "#FFFFFF",
+          "widgetId": ""
+        }
+      },
+      "onClick": "{{DownloadUtils.getDownloadTestCompareResultsUrl('LT')}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonc5x8ctwb0e": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "cloud-download",
+      "id": "groupButtonc5x8ctwb0e",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Download Logs",
+      "menuItems": {},
+      "onClick": "{{DownloadUtils.getDownloadLogsUrl()}}",
+      "placement": "CENTER",
+      "widgetId": "m9y753o4cr"
+    },
+    "groupButtonswoi5bpqok": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "cloud-download",
+      "id": "groupButtonswoi5bpqok",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Download ST Compare Results",
+      "menuItems": {},
+      "onClick": "{{DownloadUtils.getDownloadTestCompareResultsUrl('ST')}}",
+      "placement": "CENTER",
+      "widgetId": "m8t74jrjfl"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mwdo6fr0l3",
+  "leftColumn": 1,
+  "orientation": "vertical",
+  "parentColumnSpace": 16.53125,
+  "parentId": "wj53wsnqj2",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "topRow": 18,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "48njw2sm4b",
+  "widgetName": "DownloadButtons"
+}

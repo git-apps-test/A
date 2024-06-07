@@ -1,0 +1,7 @@
+SELECT * from 
+(SELECT run.action, run.metric, run.meta,  AVG(run.value) as value,  MIN(run.value) as min, (array_agg(run_metas.pull_request_id))[1] as prId, (array_agg(run_metas.created_at))[1] as created_at
+from run JOIN (select id, created_at, pull_request_id from run_meta where is_merge_commit=true order by created_at DESC) as run_metas
+on run.meta = run_metas.id
+WHERE metric in ({{Utils.getMetricsToShow()}})
+AND action = '{{Utils.getCurrentAction()}}'
+GROUP BY meta, action, metric ORDER BY run.action, created_at DESC) as runs LIMIT {{selectMetrics.selectedOptionValues.length * 100}};

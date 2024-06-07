@@ -1,0 +1,14 @@
+select 
+Max(created_at) as created_at,
+Min(author) as author,
+Min(commit_id) as commit_id,
+Min(branch) as branch,
+Max(id) as id,
+Max(pr_title) as title,
+pull_request_id from run_meta 
+WHERE 
+pull_request_id <> -1 AND
+repo='{{RepoSelect.selectedOptionValue}}'
+GROUP BY pull_request_id 
+
+ORDER BY created_at DESC  limit 100;

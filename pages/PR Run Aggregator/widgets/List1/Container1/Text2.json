@@ -1,0 +1,81 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 59,
+  "boxShadow": "none",
+  "displayName": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.75rem",
+  "fontStyle": "",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "nwl6hsu568",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "logBlackList": {
+    "animateLoading": true,
+    "bottomRow": true,
+    "displayName": true,
+    "fontSize": true,
+    "fontStyle": true,
+    "hideCard": true,
+    "iconSVG": true,
+    "isCanvas": true,
+    "isLoading": true,
+    "isVisible": true,
+    "key": true,
+    "leftColumn": true,
+    "minHeight": true,
+    "overflow": true,
+    "parentColumnSpace": true,
+    "parentId": true,
+    "parentRowSpace": true,
+    "renderMode": true,
+    "rightColumn": true,
+    "shouldTruncate": true,
+    "text": true,
+    "textAlign": true,
+    "textColor": true,
+    "topRow": true,
+    "truncateButtonColor": true,
+    "type": true,
+    "version": true,
+    "widgetId": true,
+    "widgetName": true
+  },
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "SCROLL",
+  "parentColumnSpace": 6.775390625,
+  "parentId": "jnj0tzknpv",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{(function () {\n  var result = \"<table cellspacing='3' border='1'>\";\n\tresult += \"<tr><td style='font-weight: bold'></td><td style='font-weight: bold'>Median</td></tr>\"\n\tvar output = _.groupBy(currentItem, 'action')\n\tvar outputArr = _.toArray(output)\n    for(var i=0; i<outputArr.length; i++) {\n        result += \"<tr><td style='font-weight: bold'>\"+outputArr[i][0].action+\"</td>\";\n\t\t\tfor(var j=0; j<outputArr[i].length; j++) {\n\t\t\t\tresult += \"<tr><td>\"+outputArr[i][j].metric+\"</td><td>\"+outputArr[i][j].median+\"</td><tr>\"\n\t\t\t}\n\t\t\t\n        \n        result += \"</tr><tr><td>----</td><td>-----</td></tr>\";\n    }\n    result += \"</table>\";\n\n    return result;\n})()\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 4,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "sf0e0dxync",
+  "widgetName": "Text2"
+}

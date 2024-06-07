@@ -1,0 +1,59 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationVersion": 2,
+  "color": "#F1DEFF",
+  "evaluationVersion": 2,
+  "icon": "bar-graph",
+  "pages": [
+    {
+      "id": "PR Run Aggregator",
+      "isDefault": false
+    },
+    {
+      "id": "PR Details Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Release Master Comparison",
+      "isDefault": false
+    },
+    {
+      "id": "Tracking By Metric Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Actions on Metrics",
+      "isDefault": false
+    },
+    {
+      "id": "Mean of Repos",
+      "isDefault": false
+    },
+    {
+      "id": "Tracking By Metric",
+      "isDefault": true
+    },
+    {
+      "id": "Release Metrics",
+      "isDefault": false
+    },
+    {
+      "id": "PR Details",
+      "isDefault": false
+    },
+    {
+      "id": "Last 100 PR performance Runs ",
+      "isDefault": false
+    },
+    {
+      "id": "Satish Last 100 PR perf",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  }
+}

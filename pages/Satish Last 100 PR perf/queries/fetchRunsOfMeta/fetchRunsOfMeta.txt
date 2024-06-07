@@ -1,0 +1,2 @@
+SELECT * FROM public.run where meta={{this.params.meta}} and metric in ({{PR_Run_meta.getMetricsToShow()}});
+

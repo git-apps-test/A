@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "633baef3cc554c49c42c8021_6343d70205671e46ee8faff3",
+  "id": "Release Metrics_Utils",
+  "unpublishedCollection": {
+    "name": "Utils",
+    "pageId": "Release Metrics",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "defaultMetrics",
+        "value": "[\"scripting\", \"rendering\", \"worker_scripting\"]"
+      }
+    ]
+  }
+}

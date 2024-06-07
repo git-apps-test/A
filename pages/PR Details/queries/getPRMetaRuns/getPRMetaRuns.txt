@@ -1,0 +1,2 @@
+SELECT gh_run_id as value, CONCAT(gh_run_id, ' (', SUBSTRING(commit_id,1,7),') ',
+(CASE WHEN is_merge_commit=true THEN '⭐' ELSE '' END)) as label, json_agg(json_build_object('label', gh_run_attempt, 'value', gh_run_attempt, 'time', created_at)) as children, (array_agg(id))[1] as id FROM run_meta where pull_request_id={{prSelect.selectedOptionValue}} and repo='{{RepoSelect.selectedOptionValue}}' GROUP BY gh_run_id, commit_id, is_merge_commit ORDER BY gh_run_id DESC LIMIT 100;

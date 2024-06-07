@@ -1,0 +1,185 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 365,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "r6k0lml8ut": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "Sales"
+    }
+  },
+  "chartName": "Other",
+  "chartType": "CUSTOM_FUSION_CHART",
+  "customEChartConfig": {
+    "dataset": {
+      "source": [
+        [
+          "Day",
+          "Baidu",
+          "Google",
+          "Bing"
+        ],
+        [
+          "Mon",
+          620,
+          120,
+          60
+        ],
+        [
+          "Tue",
+          732,
+          132,
+          72
+        ],
+        [
+          "Wed",
+          701,
+          101,
+          71
+        ],
+        [
+          "Thu",
+          734,
+          134,
+          74
+        ],
+        [
+          "Fri",
+          1090,
+          290,
+          190
+        ],
+        [
+          "Sat",
+          1130,
+          230,
+          130
+        ],
+        [
+          "Sun",
+          1120,
+          220,
+          110
+        ]
+      ]
+    },
+    "grid": {
+      "bottom": 30,
+      "containLabel": true,
+      "left": 15,
+      "right": 15,
+      "top": 100
+    },
+    "legend": {
+      "top": 40,
+      "type": "scroll"
+    },
+    "series": [
+      {
+        "stack": "Search Engine",
+        "type": "bar"
+      },
+      {
+        "stack": "Search Engine",
+        "type": "bar"
+      },
+      {
+        "stack": "Search Engine",
+        "type": "bar"
+      }
+    ],
+    "title": {
+      "left": "center",
+      "text": "Search Engine Usage",
+      "textStyle": {
+        "overflow": "truncate",
+        "width": 200
+      }
+    },
+    "tooltip": {
+      "axisPointer": {
+        "type": "shadow"
+      },
+      "trigger": "axis"
+    },
+    "xAxis": [
+      {
+        "type": "category"
+      }
+    ],
+    "yAxis": [
+      {
+        "type": "value"
+      }
+    ]
+  },
+  "customFusionChartConfig": "{{(function () {\n  let config = {\n\t\t\ttype: \"msline\",\n\t\t\tdataSource: {\n\t\t\t\tchart: {\n\t\t\t\t\tcaption: \"Metric actions across PRs\",\n\t\t\t\t\tsubCaption: \"Showing selected actions across PRs for the metric - other\",\n\t\t\t\t\txAxisName: \"Meta ID\",\n\t\t\t\t\ttheme: \"fusion\"\n    \t\t},\n\t\t\t\tcategories: [{category: []}],\n\t\t\t\tdataset: [],\n\t\t\t\ttrendlines: [{\n\t\t\t\t\tline: []\n\t\t\t\t}]\n\t\t\t}\n\t\t}\n\t\tlet d =  run.data\n\t\td.map((v) => {\n\t\t\t\tif(!_.find(config.dataSource.categories[0].category, {label: v.meta.toString()})) {\n\t\t\t\t\tconfig.dataSource.categories[0].category.push({\"label\": v.meta.toString()})\n\t\t\t\t}\n\t\t\t\tif(!_.find(config.dataSource.dataset, {seriesname: v.action})) {\n\t\t\t\t\tif(v.metric == 'other')\n\t\t\t\t\t config.dataSource.dataset.push({seriesname: v.action, data: [{value: v.median}]})\n\t\t\t\t} else {\n\t\t\t\t\tif(v.metric == 'other')\n\t\t\t\t\t _.find(config.dataSource.dataset, {seriesname: v.action}).data.push({value: v.median})\n\t\t\t\t}\n\t\t})\n\t\n\tconfig.dataSource.dataset.map((v) => {\n\t\t\tvar x = _.meanBy(v.data, (p) => p.value)\n\t\t\tconfig.dataSource.trendlines[0].line.push({\n\t\t\t\t\"startvalue\": x,\n\t\t\t\t\"color\": Math.floor(Math.random()*16777215).toString(16),\n\t\t\t\t\"valueOnRight\": \"1\",\n\t\t\t\t\"displayvalue\": \"Mean\"\n\t\t\t})\n\t\t})\n\t\t\n\t\treturn config\n})();}}",
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "customFusionChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6adbe31e.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "6o1amob9l3",
+  "labelOrientation": "auto",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "onDataPointClick": "{{(function () { storeValue('metricDetail',other.selectedDataPoint.x, false)\n\t\t\t\t\t\t\t\t\t\tshowModal(\"Modal1\")\n\trun_meta.run()\n\n})()}}",
+  "parentColumnSpace": 15.484375,
+  "parentId": "zqdxb98xdp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "setAdaptiveYMin": true,
+  "showDataPointLabel": false,
+  "topRow": 326,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "tg2di8q9sn",
+  "widgetName": "other",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

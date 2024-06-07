@@ -1,0 +1,1 @@
+SELECT * FROM public.run_meta where is_merge_commit=false and repo='{{RepoSelect.selectedOptionValue}}' order by created_at desc limit 100;

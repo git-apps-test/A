@@ -1,0 +1,17 @@
+select 
+-- Max(created_at) as created_at,
+-- Min(author) as author,
+-- Min(commit_id) as commit_id,
+-- Min(branch) as branch,
+Max(id) as id,
+-- Max(pr_title) as title,
+pull_request_id as value,
+CONCAT(pull_request_id,'-',SUBSTRING(Max(pr_title),1,64), CONCAT(' (',(array_agg(author))[1],')')) as label
+
+from run_meta 
+WHERE 
+pull_request_id <> -1 AND
+repo='{{RepoSelect.selectedOptionValue}}'
+GROUP BY pull_request_id 
+
+ORDER BY id DESC  limit 100;

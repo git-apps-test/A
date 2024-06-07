@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_62d52ab1b06ce90d91db3961",
+  "id": "Tracking By Metric_utils",
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Tracking By Metric",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "unitMapToMetric",
+        "value": "[{\n  metric: \"scripting\",\n  unit: \"MS\"\n}, {\n  metric: \"printing\",\n  unit: \"MS\"\n}, {\n  metric: \"rendering\",\n  unit: \"MS\"\n}, {\n  metric: \"ideal\",\n  unit: \"MS\"\n}, {\n  metric: \"others\",\n  unit: \"MS\"\n}, {\n  metric: \"ForcedLayout\",\n  unit: \"events\"\n}, {\n  metric: \"ForcedStyle\",\n  unit: \"events\"\n}, {\n  metric: \"LongHandler\",\n  unit: \"events\"\n}, {\n  metric: \"LongTask\",\n  unit: \"events\"\n}]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

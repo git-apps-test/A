@@ -1,0 +1,133 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "displayName": "Menu Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "menuColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuItem3.onClick"
+    },
+    {
+      "key": "menuItems.menuItemcam230q1rk.onClick"
+    },
+    {
+      "key": "menuItems.menuItemtkei0cohk9.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuItem3.onClick"
+    },
+    {
+      "key": "menuItems.menuItemcam230q1rk.onClick"
+    },
+    {
+      "key": "menuItems.menuItemtkei0cohk9.onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "more",
+  "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
+  "isCompact": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{DownloadChromeProfileSelect.isValid}}",
+  "key": "0iskyo2z75",
+  "label": "Download Chrome Profile",
+  "leftColumn": 1,
+  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+  "menuItems": {
+    "menuItem1": {
+      "iconName": "cloud-download",
+      "id": "menuItem1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Run 1",
+      "onClick": "{{DownloadUtils.getDownloadChromeProfileUrl(1)}}",
+      "widgetId": ""
+    },
+    "menuItem2": {
+      "iconName": "cloud-download",
+      "id": "menuItem2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Run 2",
+      "onClick": "{{DownloadUtils.getDownloadChromeProfileUrl(2)}}",
+      "widgetId": ""
+    },
+    "menuItem3": {
+      "iconName": "cloud-download",
+      "id": "menuItem3",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Run 3",
+      "onClick": "{{DownloadUtils.getDownloadChromeProfileUrl(3)}}",
+      "widgetId": ""
+    },
+    "menuItemcam230q1rk": {
+      "iconName": "cloud-download",
+      "id": "menuItemcam230q1rk",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Run 4",
+      "onClick": "{{DownloadUtils.getDownloadChromeProfileUrl(4)}}",
+      "widgetId": "kyau2byrvk"
+    },
+    "menuItemtkei0cohk9": {
+      "iconName": "cloud-download",
+      "id": "menuItemtkei0cohk9",
+      "index": 4,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Run 5",
+      "onClick": "{{DownloadUtils.getDownloadChromeProfileUrl(5)}}",
+      "widgetId": "seg9shap1f"
+    }
+  },
+  "menuItemsSource": "STATIC",
+  "menuVariant": "SECONDARY",
+  "parentColumnSpace": 9.5,
+  "parentId": "wj53wsnqj2",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "topRow": 12,
+  "type": "MENU_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "j1h3ar4nd6",
+  "widgetName": "DownloadChromeProfile"
+}

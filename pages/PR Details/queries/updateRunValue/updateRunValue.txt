@@ -1,0 +1,3 @@
+UPDATE run
+SET value = {{this.params.value}}
+WHERE id={{this.params.id}};

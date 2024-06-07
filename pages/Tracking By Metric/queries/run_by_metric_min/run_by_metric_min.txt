@@ -1,0 +1,5 @@
+SELECT run_meta.pull_request_id, run_meta.created_at, machine, metric, action, meta, MIN(value) as median from public.run
+LEFT JOIN run_meta ON run.meta = run_meta.id
+WHERE metric = '{{Select1.selectedOptionValue}}' {{SelectMachineFilter.selectedOptionValue ? "AND machine = '" + SelectMachineFilter.selectedOptionValue + "'": ""}}  AND action IN ({{MultiSelect2.selectedOptionValues.reduce((result, item, index) => {
+		return result + "'" + item + "'" + (index != MultiSelect2.selectedOptionValues.length - 1 ? "," : "")
+	}, "")}}) AND run_meta.created_at >= '{{DatePicker1.selectedDate}}' AND run_meta.created_at <= '{{DatePicker2.selectedDate}}' GROUP BY metric, action, meta, machine, run_meta.pull_request_id, run_meta.created_at ORDER BY run_meta.created_at

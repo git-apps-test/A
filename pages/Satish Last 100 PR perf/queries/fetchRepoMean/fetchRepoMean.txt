@@ -1,0 +1,1 @@
+SELECT * FROM public.mean where repo='{{RepoSelect.selectedOptionValue}}' AND commit_id IN (select commit_id from public.mean where repo='{{RepoSelect.selectedOptionValue}}' ORDER BY created_at desc LIMIT 1) ORDER BY created_at desc;

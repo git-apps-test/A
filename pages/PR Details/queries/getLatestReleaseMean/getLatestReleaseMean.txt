@@ -1,0 +1,19 @@
+
+SELECT 
+cast(AVG(median) as decimal(10,2)) as median,
+cast(AVG(min) as decimal(10, 2)) as min,
+cast(STDDEV(median) as decimal(10,2)) as SD,
+cast(STDDEV(min) as decimal(10, 2)) as SDmin,
+cast((ARRAY_AGG(median))[1] as decimal(10, 2)) as lastRelease,
+cast((array_agg(median))[1] as decimal(10, 2)) as median1,
+cast((array_agg(median))[2] as decimal(10, 2)) as median2,
+cast((array_agg(median))[3] as decimal(10, 2)) as median3,
+cast((array_agg(min))[1] as decimal(10, 2)) as min1,
+cast((array_agg(min))[2] as decimal(10, 2)) as min2,
+cast((array_agg(min))[3] as decimal(10, 2)) as min3,
+action,
+metric from 
+(SELECT action, metric, meta, max(run_metas.created_at) as created_at, PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY value) as median, MIN(value) as min 
+from run join (select id, created_at from run_meta where is_merge_commit {{Utils.getCurrentRunMetaId() ? `and id < ${Utils.getCurrentRunMetaId()} ` : ''}} AND base_branch = 'release' order by created_at DESC limit 50 offset 0) as run_metas on run.meta = run_metas.id
+WHERE metric IN ({{Utils.getMetricsToShow()}})
+GROUP BY meta, action, metric ORDER BY action, metric, created_at DESC) as medians GROUP BY action, metric;

@@ -1,0 +1,1 @@
+SELECT * FROM public.mean where commit_id in {{this.params.allCommits}} and metric='{{this.params.metric}}';

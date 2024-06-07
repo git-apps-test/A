@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "labelTextSize"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba.svg",
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "wb14uyt3lv",
+  "labelStyle": "BOLD",
+  "labelText": "Machine",
+  "labelTextColor": "#666",
+  "labelTextSize": "0.75rem",
+  "leftColumn": 37,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onOptionChange": "{{run.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 18.921875,
+  "parentId": "zqdxb98xdp",
+  "parentRowSpace": 10,
+  "placeholderText": "Select to filter runs",
+  "renderMode": "CANVAS",
+  "rightColumn": 57,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"ubuntu-latest\",\n    \"value\": \"ubuntu-latest\"\n  },\n  {\n    \"label\": \"buildjet-4vcpu-ubuntu-2004\",\n    \"value\": \"buildjet-4vcpu-ubuntu-2004\"\n  }\n]",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "i1gmzzb79b",
+  "widgetName": "SelectMachineFilter"
+}
